@@ -1,0 +1,97 @@
+		#topdiv {
+    		width:100%;
+    		height:400px;
+    	}
+        .heading {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            color : green;
+            text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+        }
+        #formStyle{
+        	width:300px;
+        	float:left;
+        }
+        #form1 {
+        	width:100%;
+        	margin-top:20px;
+        }
+        span{
+            margin: 0.5em 0.5em 0.5em 1em;
+        }
+        input {
+            margin: 0.5em 0.5em 0.5em 1em;
+            text-align: left;
+            padding: 0.5em 0.5em 0.5em 1em;
+            border-radius: 5px;
+            -webkit-box-shadow: 2px 5px 6px 0px rgba(350, 350, 350, 1);
+			-moz-box-shadow:  2px 5px 6px 0px rgba(350, 350, 350, 1);
+			box-shadow:   2px 5px 6px 0px rgba(350, 350, 350, 1);
+        }
+        input:focus:invalid {
+        	background: #fff url(images/invalid.png) no-repeat 98% center;
+			box-shadow: 0 0 5px #d45252;
+			border-color: #b03535;
+        }
+        input:required:valid{
+        	background: #fff url(images/valid.png) no-repeat 98% center;
+			box-shadow: 0 0 5px #5cd053;
+			border-color: #28921f;
+        }
+        label{
+            margin:0.5em 0.5em 0.5em 1em;
+            text-align: right;
+        }
+    	.listStyle{
+    		width: 300px;
+    		height: 300px;
+    		margin:25px 0 0 30px;
+    		float:left;
+    		position:relative;
+    		font-family: 'Lobster', cursive;
+    	}
+    	
+    	.listStyle td {
+    		padding: 7px;
+    	}
+    	.listStyle tr:nth-of-type(odd) {
+    		background: lightyellow;
+    	}
+    	.listStyle tr:nth-of-type(even) {
+    		background: lightblue;
+    	}
+    	.listStyle th{
+    		font-weight: bold;
+    		text-decoration: underline;
+    	}
+    	
+        /****** Media queries for other devices *******/
+        /* mobiles first */
+        @media screen and (max-width:580px) {
+        	.listStyle {
+        		width:400px;
+        		margin:10px 0 0 0;
+        	}
+        	.heading {
+        		color: blue;
+        	}
+        	label,input,span {
+        		font-size: 0.8em;
+        	}
+        	.listStyle td {
+    			padding: 15px;
+    			width: 122px;
+    		}
+        }
+        
+        /* tablets */
+        @media screen and (min-width:581px) and (max-width:1148px) {
+        	body {
+        		background: #BDBDBD;
+        	}
+        	.listStyle{
+    			width: 250px;
+    		}
+        }
+        
+        

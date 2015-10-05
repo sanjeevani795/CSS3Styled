@@ -1,0 +1,259 @@
+﻿#body1 {
+	position: relative;
+	min-width:479px;
+	max-width:1350px;
+	margin: 2em;
+	text-align: center;
+}
+
+#topdiv {
+	height:640px;
+	overflow:hidden;
+	position:relative;
+	border:3px solid #ccc;
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+}
+
+#header h1{
+	position:absolute;
+	left: 215px;
+	top: 13px;
+	width:290px;
+	height:93px;
+	margin:0;
+	padding:0;
+	background: url(images/social.png) no-repeat;
+	text-indent:-9999px;
+}
+
+#menu {
+  width: 500px;
+  float:right;
+  margin-right:182px;
+  text-align: center;
+  display: inline;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  text-decoration:none;
+  cursor: pointer;
+}
+
+#menu li {
+  width: 70px;
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  position: relative;
+  padding: 10px 10px 10px 15px;
+  background: #ccc;
+  margin:0;
+  cursor: pointer;
+}
+
+#menu li:hover {
+  background: #B45F04;
+  color: #fff;
+}
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sub-menu li{
+  background: #ccc; 
+  display: block; 
+  color: #fff;
+  cursor: pointer;
+}
+ 
+#menu li:hover .sub-menu{
+  opacity: 1;
+  visibility: visible;
+  z-index:100;
+}
+
+#button-1 {
+    position: absolute;
+    left: 630px;
+    top: 613px;
+}
+
+#button-2 {
+    position: absolute;
+    left: 650px;
+    top: 613px;
+}
+
+#images {
+	width:200%;
+	list-style:none;
+	overflow:hidden;
+	left: 0px;
+	position:relative;
+	-webkit-transition: left 1.0s cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: left 1.0s cubic-bezier(0.77, 0, 0.175, 1);
+	-o-transition: left 1.0s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: left 1.0s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#images>li {
+	width: 50%;
+	float:left;
+	position: relative;
+}
+
+#images>li>img {
+	margin-left: -55px;
+}
+
+#button-1:checked~#images { left: 0; }
+
+#button-2:checked~#images { left: -100%; }
+
+#middlediv p{
+	padding: 5px;
+	font-family: 'ambleitalic', sans-serif;
+	font-size:20px;
+}
+
+#bottomdiv {
+	margin: 0 auto;
+}
+
+.listImage {
+	list-style:none;
+	width:100%;
+	margin-left: 60px;
+}
+
+.listImage li img {
+	padding: 5px;
+	float:left;
+}
+
+/****** Media queries for other devices *******/
+        /* mobiles first */
+    @media screen and (max-width:600px) {
+    	#images img{
+    		width: 410px;
+    		height: 200px;
+    	}
+    	#button-1 {
+    		left: 200px;
+    		top: 380px;
+		}
+		#button-2 {
+    		left: 220px;
+    		top: 380px;
+		}
+		#topdiv {
+			height:400px;
+		}
+		#header h1{
+			position:relative;
+			margin-left:-18%;
+    	}
+    	#menu {
+			padding:5px 0 5px 0px;
+			margin-right: -5%;
+		}
+		#menu li{
+			font-size:10px;
+			padding:4px 4px;
+		}
+		.sub-menu {
+			top:28px;
+			width: 80px;
+		}
+	}
+    @media screen and (min-width:581px) and (max-width:790px) {
+    	#images img{
+    		width: 530px;
+    		height: 280px;
+    	}
+    	#button-1 {
+    		left: 300px;
+    		top: 460px;
+		}
+		#button-2 {
+    		left: 320px;
+    		top: 460px;
+		}
+		#topdiv {
+			height:480px;
+		}
+		#header h1{
+			position:relative;
+			margin-left:-1%;
+    	}
+		#menu {
+			padding:5px 0 5px 0px;
+			margin-right: 13%;
+		}
+		#menu li{
+			font-size:11.5px;
+			padding:5px 5px;
+		}
+		.sub-menu {
+			top:28px;
+			width: 70px;
+		}
+    }
+    @media screen and (min-width:791px) and (max-width:1148px) {
+    	#images img{
+    		width: 710px;
+    		height: 380px;
+    	}
+    	#button-1 {
+    		left: 450px;
+    		top: 510px;
+		}
+		#button-2 {
+    		left: 470px;
+    		top: 510px;
+		}
+		#header h1{
+			position:relative;
+			margin-left:-140px;
+    	}
+		#topdiv {
+			height:550px;
+		}
+		#menu li{
+			font-size:12px;
+			padding:5px 5px;
+		}
+		.sub-menu {
+			top:28px;
+			width: 70px;
+		}
+	}
+	@media screen and (min-width:791px) and (max-width:915px) {
+		#menu {
+			padding:5px 0 5px 0px;
+			margin-right: 2%;
+			margin-top: -50px;
+		}
+		#header h1{
+			position:relative;
+			margin-left:-25%;
+    	}
+	}
+	@media screen and (min-width:916px) and (max-width:1148px) {
+		#menu {
+			padding:5px 0 5px 0px;
+			margin-right: 8%;
+			margin-top: -50px;
+		}
+		#header h1{
+			position:relative;
+			margin-left:-15%;
+    	}
+	}
